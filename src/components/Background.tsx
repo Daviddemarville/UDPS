@@ -17,46 +17,44 @@ const Background = () => {
 
 		switch (location.pathname) {
 			case "/":
-				newClass =
-					"bg-[url('./images/fond5.jpg')] bg-cover bg-left max-h-[50%]";
+				newClass = "bg-[url('/images/fond5.jpg')] bg-cover bg-left max-h-[50%]";
 				newTitle = "";
 				newText = "";
 				newShowButton = false;
 				break;
 			case "/Membres":
 				newClass =
-					"bg-[url('./images/fond3.jpg')] bg-cover bg-center max-h-[50%]";
+					"bg-[url('/images/fond3.jpg')] bg-cover bg-center max-h-[50%]";
 				newTitle = "";
 				newText = "";
 				newShowButton = false;
 				break;
 			case "/Don":
 				newClass =
-					"bg-[url('./images/fond10.jpg')] bg-cover bg-center max-h-[50%]";
+					"bg-[url('/images/fond10.jpg')] bg-cover bg-center max-h-[50%]";
 				newTitle = "";
-				newText = "Milles mercis pour votre soutien !";
+				newText = "";
 				break;
 			case "/About":
-				newClass = "bg-[url('./images/fond2.jpg')] bg-cover bg-top max-h-[50%]";
+				newClass = "bg-[url('/images/fond2.jpg')] bg-cover bg-top max-h-[50%]";
 				newTitle = "";
 				newText = "";
 				break;
 			case "/Dps":
-				newClass =
-					"bg-[url('./images/fond7.jpg')] bg-cover bg-left max-h-[50%]";
+				newClass = "bg-[url('/images/fond7.jpg')] bg-cover bg-left max-h-[50%]";
 				newTitle = "";
 				newText = "";
 				break;
 			case "/Contact":
 				newClass =
-					"bg-[url('./images/fond8.jpg')] bg-cover bg-center max-h-[50%]";
+					"bg-[url('/images/fond8.jpg')] bg-cover bg-center max-h-[50%]";
 				newTitle = "";
 				newText = "";
 				break;
 			case "/Archive":
 				newClass =
-					"bg-[url('./images/fond9.jpg')] bg-cover bg-center max-h-[50%]";
-				newTitle = "Nos articles";
+					"bg-[url('/images/fond9.jpg')] bg-cover bg-center max-h-[50%]";
+				newTitle = "";
 				newText = "";
 				break;
 			default:
