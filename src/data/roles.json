@@ -1,0 +1,39 @@
+[
+    {
+      "role": "Président",
+      "prerogatives": "Le président est le garant du bon fonctionnement de l'association, il prend les décisions stratégiques et veille à la mise en œuvre des projets. Il représente l'association auprès des autorités et partenaires."
+    },
+    {
+      "role": "Vice-président",
+      "prerogatives": "Le vice-président soutient le président dans ses tâches et le remplace en cas d'absence. Il peut être amené à diriger certains projets spécifiques."
+    },
+    {
+      "role": "Trésorier",
+      "prerogatives": "Le trésorier gère les finances de l'association, supervise les comptes et prépare les bilans financiers. Il s'assure de la bonne utilisation des fonds."
+    },
+    {
+      "role": "Secrétaire",
+      "prerogatives": "Le secrétaire est responsable de la gestion des documents administratifs. Il rédige les procès-verbaux des réunions et assure la communication interne."
+    },
+    {
+      "role": "Secrétaire adjointe",
+      "prerogatives": "La secrétaire adjointe assiste le secrétaire dans ses tâches administratives et peut le remplacer en cas d'absence."
+    },
+    {
+      "role": "Responsable opérationnel",
+      "prerogatives": "Le responsable opérationnel supervise les opérations sur le terrain, en s'assurant que les événements et dispositifs de secours se déroulent correctement."
+    },
+    {
+      "role": "Responsable matériel",
+      "prerogatives": "Le responsable matériel est en charge de la gestion et de l'entretien du matériel nécessaire aux interventions. Il s'assure que tout le matériel est prêt et opérationnel."
+    },
+    {
+      "role": "Responsable logistique",
+      "prerogatives": "Le responsable logistique organise et coordonne la logistique des événements et dispositifs de secours, s'assurant que toutes les ressources nécessaires sont disponibles."
+    },
+    {
+      "role": "Formateur",
+      "prerogatives": "Le formateur dispense les formations aux membres de l'association, en s'assurant que les standards de qualité et de sécurité sont respectés."
+    }
+  ]
+  

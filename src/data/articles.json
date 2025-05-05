@@ -1,0 +1,49 @@
+[
+    {
+      "title": "Cérémonie du Guide Michelin France 2025",
+      "startDate": "2025-03-31",
+      "endDate": "2025-03-31",
+      "recurrence": "once",
+      "image": "./images/chef.jpg",
+      "alt": "toque de chef",
+      "description": "Après la Nouvelle-Aquitaine, l'Alsace et le Centre Val-de-Loire, c'est au tour de la région Grand-Est d'accueillir le Guide MICHELIN France pour sa prochaine cérémonie 2025 !",
+      "info": "Soirée du 31 mars 2025 à Metz.",
+      "link": "https://guide.michelin.com/fr/fr/article/michelin-guide-ceremony/metz-accueillera-la-ceremonie-du-guide-michelin-france-2025"
+    },
+    {
+      "title": "Metz Auto Passion",      
+      "startDate": "2025-04-13",
+      "endDate": "2025-04-14",
+      "recurrence": "weekly",
+      "daysOfWeek": ["Saturday", "Sunday"],
+      "image": "./images/auto.jpg",
+      "alt": "auto",
+      "description": "Du 12 au 13 avril, les professionnels, concessionnaires, associations, accessoiristes seront rassemblés à Metz pour une nouvelle expérience au Parc des Expositions !",
+      "info": "Samedi 12 et Dimanche 13 Avril 2025 à Metz.",
+      "link": "https://www.metz-expo.com/evenement-75-metz-auto-passion"
+    },
+    {
+      "title": "Les Constellations de Metz",
+      "startDate": "2025-07-01",
+      "endDate": "2025-08-31",
+      "recurrence": "weekly",  
+      "daysOfWeek": ["Saturday"],
+      "image": "./images/constellations.jpg",
+      "alt": "constellations",
+      "description": "Venez découvrir le ciel étoilé chaque samedi et dimanche de juillet et août.",
+      "info": "Tous les samedis et dimanches soirs de juillet et août à Metz.",
+      "link": "https://www.exemple.com/constellations"
+    },
+    {
+      "title": "Festival de musique non-stop",
+      "startDate": "2025-06-15",
+      "endDate": "2025-06-22",
+      "recurrence": "daily",  
+      "image": "./images/festival.jpg",
+      "alt": "festival",
+      "description": "Un festival de musique qui se déroule tous les jours pendant une semaine !",
+      "info": "Du 15 au 22 juin 2025 à Metz.",
+      "link": "https://www.exemple.com/festival"
+    }
+  ]
+  

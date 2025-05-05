@@ -1,0 +1,4 @@
+* {
+  
+    box-sizing: border-box; /* Assure-toi que le box-sizing est bien border-box pour un comportement cohérent */
+  }

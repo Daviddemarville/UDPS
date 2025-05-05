@@ -1,0 +1,113 @@
+[
+    {
+      "nom": "De Marville",
+      "prenom": "David",
+      "roles": {
+        "bureau": ["Trésorier"],
+        "secourisme": ["Secouriste", "Chauffeur VPSP"]
+      },
+      "photo": "./images/daviddm.jpg",
+      "bio": "Passionné par la gestion et l'organisation des finances, je veille à la bonne gestion des fonds de l'association.",
+      "motivation": "J'ai toujours eu un intérêt pour les chiffres et les processus administratifs, c'est donc avec enthousiasme que j'ai accepté ce rôle de trésorier."
+    },
+    {
+      "nom": "Mori",
+      "prenom": "Sébastien",
+      "roles": {
+        "bureau": ["Président"],
+        "secourisme": ["Équipier secouriste"]
+      },
+      "photo": "./images/sebm.jpg",
+      "bio": "En tant que président, je m'assure du bon fonctionnement global de l'association, en représentant et guidant l'équipe.",
+      "motivation": "Je suis motivé par la mission de l'association et je souhaite apporter ma vision pour faire évoluer nos projets."
+    },
+    {
+      "nom": "Suinot",
+      "prenom": "Orlane",
+      "roles": {
+        "bureau": ["Secrétaire"],
+        "secourisme": ["Équipier secouriste"]
+      },
+      "photo": "",
+      "bio": "Mon rôle est de gérer les documents administratifs, de rédiger les procès-verbaux et d'assurer la communication interne.",
+      "motivation": "Je m'investis dans l'association pour garantir une organisation claire et fluide."
+    },
+    {
+      "nom": "Rudoni",
+      "prenom": "Julien",
+      "roles": {
+        "bureau": ["Responsable opérationnel"],
+        "secourisme": ["Chef de poste", "Équipier secouriste"]
+      },
+      "photo": "",
+      "bio": "Je coordonne les actions terrain, en assurant que les événements et projets se déroulent sans accroc.",
+      "motivation": "J'aime voir les projets prendre forme et réussir grâce à une bonne organisation sur le terrain."
+    },
+    {
+      "nom": "Thomas",
+      "prenom": "Alain",
+      "roles": {
+        "bureau": ["Vice-président", "Formateur"],
+        "secourisme": ["Chef de poste", "Équipier secouriste"]
+      },
+      "photo": "",
+      "bio": "Je soutiens le président dans toutes ses tâches et je le remplace en cas d'absence.",
+      "motivation": "Je m'engage pour renforcer les actions de l'association et apporter mes compétences en gestion de projet."
+    },
+    {
+      "nom": "Durand",
+      "prenom": "Pierre",
+      "roles": {
+        "bureau": [],
+        "secourisme": ["Équipier secouriste"]
+      },
+      "photo": "",
+      "bio": "Membre actif, je participe aux événements et soutiens les actions de l'association.",
+      "motivation": "J'ai rejoint l'association pour aider à la réalisation de projets concrets et utiles."
+    },
+    {
+      "nom": "Lemoine",
+      "prenom": "Claire",
+      "roles": {
+        "bureau": [],
+        "secourisme": ["Nouveau membre"]
+      },
+      "photo": "",
+      "bio": "Je soutiens les événements, et je m'investis particulièrement dans la communication de l'association.",
+      "motivation": "C'est l'opportunité de contribuer à une cause qui me tient à cœur."
+    },
+    {
+      "nom": "Benoit",
+      "prenom": "Marc",
+      "roles": {
+        "bureau": [],
+        "secourisme": ["Équipier Secouriste"]
+      },
+      "photo": "",
+      "bio": "Je fais partie des membres de l'association, toujours là pour apporter mon soutien aux projets.",
+      "motivation": "Aider à organiser et à participer à des événements enrichissants."
+    },
+    {
+      "nom": "Lemoine",
+      "prenom": "Pauline",
+      "roles": {
+        "bureau": [],
+        "secourisme": ["Équipier Secouriste"]
+      },
+      "photo": "",
+      "bio": "Je m'investis dans les projets de l'association et j'essaie d'apporter des idées nouvelles.",
+      "motivation": "Je suis convaincue que mon implication peut aider à faire grandir l'association."
+    },
+    {
+      "nom": "Berger",
+      "prenom": "David",
+      "roles": {
+        "bureau": [],
+        "secourisme": ["Équipier secouriste"]
+      },
+      "photo": "",
+      "bio": "Membre de l'équipe, je m'efforce de participer aux tâches et aux événements de l'association.",
+      "motivation": "Mettre mon énergie et mon enthousiasme au service d'une cause collective."
+    }
+  ]
+  
