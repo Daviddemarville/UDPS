@@ -10,7 +10,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": true,  // Laisser à true pour empêcher l'émission des fichiers JS (ou mettre à false si tu veux générer du JS)
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
@@ -19,7 +19,13 @@
     "noUncheckedSideEffectImports": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,  // ✅ ligne ajoutée
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    
+    // Si tu utilises des alias comme @/components, décommente et ajuste les lignes suivantes
+    "baseUrl": "./",  // Base URL pour les imports relatifs
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "src/**/*"
