@@ -87,7 +87,7 @@ export default function About() {
 				<p className="mt-4 text-lg leading-relaxed text-justify">
 					En tant qu’association agréée, nous collaborons étroitement avec les{" "}
 					<strong>autorités publiques</strong> pour mettre en œuvre les plans de
-					sécurité sur le territoire national.
+					sécurité sur le territoire départemental.
 				</p>
 
 				<h3 className="text-xl font-bold mt-6 mb-2">Nos missions agréées</h3>
@@ -102,9 +102,6 @@ export default function About() {
 			</section>
 			{/* Insertion de l'organigramme ici */}
 			<section id="organigramme" className="max-w-6xl mx-auto">
-				<h2 className="text-3xl font-semibold text-center my-8">
-					Organigramme de l’association
-				</h2>
 				<Organigramme />
 			</section>
 			{/* Flèche de retour en haut */}

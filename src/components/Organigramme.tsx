@@ -54,7 +54,7 @@ export default function Organigramme() {
 				</div>
 
 				{/* Trésorier - Vice-Président - Secrétaire */}
-				<div className="flex justify-center gap-10">
+				<div className="flex flex-col md:flex-row justify-center gap-10">
 					{["Trésorier", "Vice-président", "Secrétaire"].map((role) => {
 						const item = organigramme.find((r) => r.role === role);
 						return item ? (
@@ -71,7 +71,7 @@ export default function Organigramme() {
 				</div>
 
 				{/* Secrétaire adjointe, Responsable opérationnel */}
-				<div className="flex justify-center gap-10">
+				<div className="flex flex-col md:flex-row justify-center gap-10">
 					{["Secrétaire adjointe", "Responsable opérationnel"].map((role) => {
 						const item = organigramme.find((r) => r.role === role);
 						return item ? (
@@ -88,7 +88,7 @@ export default function Organigramme() {
 				</div>
 
 				{/* Responsables divers */}
-				<div className="flex justify-center flex-wrap gap-8">
+				<div className="flex flex-col md:flex-row justify-center flex-wrap gap-8">
 					{["Responsable matériel", "Responsable logistique", "Formateur"].map(
 						(role) => {
 							const item = organigramme.find((r) => r.role === role);

@@ -75,7 +75,7 @@ function Accueil() {
 						En tant qu’association agréée, l’UDPS 57 est engagée dans une
 						collaboration étroite avec les autorités publiques pour participer à
 						la mise en œuvre des plans de sécurité civile sur le territoire
-						national.
+						départemental.
 					</p>
 				</article>
 				<article className="agrements flex flex-col items-center text-blue-950 w-full md:w-1/3 text-center p-4 mb-6">
