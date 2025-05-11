@@ -10,6 +10,7 @@ interface InputProps {
 	type?: string;
 	required?: boolean;
 	multiple?: boolean;
+	className?: string; // ✅ nouvelle prop pour styliser dynamiquement
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -21,6 +22,7 @@ export const Input: React.FC<InputProps> = ({
 	type = "text",
 	required = false,
 	multiple = false,
+	className = "", // valeur par défaut
 }) => {
 	return (
 		<input
@@ -32,7 +34,7 @@ export const Input: React.FC<InputProps> = ({
 			placeholder={placeholder}
 			required={required}
 			multiple={multiple}
-			className="border p-2 w-full rounded-md"
+			className={`border p-2 w-full rounded-md ${className}`} // ✅ ajout dynamique
 		/>
 	);
 };

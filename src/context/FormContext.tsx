@@ -12,6 +12,7 @@ interface FormState {
 	adresse: string;
 	telephonefixe: string;
 	telephoneportable: string;
+	fax: string;
 	nom: string;
 	representant: string;
 	fonction: string;
@@ -39,14 +40,16 @@ interface FormState {
 	hopital: string;
 	hopitaldistance: string;
 	comment: string;
-	[key: string]: string | FileList | null;
+	[key: string]: string | FileList | null | boolean;
 }
 
 interface FormContextType {
 	formState: FormState;
 	handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 	handleInputChange: (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+		e: React.ChangeEvent<
+			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+		>,
 	) => void;
 	handleSubmit: (e: React.FormEvent) => void;
 }
@@ -66,6 +69,7 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 		adresse: "",
 		telephonefixe: "",
 		telephoneportable: "",
+		fax: "",
 		nom: "",
 		representant: "",
 		fonction: "",
@@ -102,10 +106,16 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 	};
 
 	const handleInputChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+		e: React.ChangeEvent<
+			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+		>,
 	) => {
-		const { name, value } = e.target;
-		setFormState((prev) => ({ ...prev, [name]: value }));
+		const { name, type, value, checked } = e.target;
+
+		setFormState((prev) => ({
+			...prev,
+			[name]: type === "checkbox" ? checked : value,
+		}));
 	};
 
 	// Logique du bouton "Envoyer la demande"
@@ -155,7 +165,7 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 			hopital: formState.hopital,
 			hopitaldistance: formState.hopitaldistance,
 			comment: formState.comment,
-			files: formState.files, // Inclure les fichiers si nécessaire
+			files: formState.files,
 		};
 
 		// Transformation des fichiers en objets compatibles avec le type attendu
@@ -166,14 +176,12 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 				}))
 			: [];
 
-		// Étape 3: Générer le PDF avec les données du formulaire
+		// Générer le PDF
 		try {
-			const pdfBlob = await generatePDF(formDataForPDF); // Cette fonction génère un PDF à partir des données
+			const pdfBlob = await generatePDF(formDataForPDF);
 
-			// Étape 4: Préparer les pièces jointes
 			const filesToSend = [...transformedFiles];
 
-			// Étape 5: Envoi de l'email à l'utilisateur et à LudPS
 			await sendMail({
 				to: formState.email,
 				subject: "Demande de Poste de Secours",
@@ -185,17 +193,15 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 			});
 
 			await sendMail({
-				to: "ludps@example.com", // Adresse de LudPS
+				to: "ludps@example.com",
 				subject: "Nouvelle demande de poste de secours",
 				body: "Une nouvelle demande de poste de secours a été soumise. Vous trouverez ci-joint le PDF de la demande ainsi que les pièces jointes.",
-
 				attachments: [
 					...filesToSend,
 					{ filename: "demande_poste_secours.pdf", content: pdfBlob },
 				],
 			});
 
-			// Étape 6: Confirmer l'envoi
 			alert("Votre demande a bien été envoyée.");
 		} catch (error) {
 			alert(

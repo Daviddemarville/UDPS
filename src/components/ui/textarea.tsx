@@ -9,6 +9,7 @@ interface TextareaProps {
 	) => void;
 	placeholder: string;
 	required?: boolean;
+	className?: string; // ✅ ajout de className
 }
 
 export const Textarea: React.FC<TextareaProps> = ({
@@ -17,6 +18,7 @@ export const Textarea: React.FC<TextareaProps> = ({
 	onChange,
 	placeholder,
 	required = false,
+	className = "", // ✅ valeur par défaut
 }) => {
 	return (
 		<textarea
@@ -25,7 +27,7 @@ export const Textarea: React.FC<TextareaProps> = ({
 			onChange={onChange}
 			placeholder={placeholder}
 			required={required}
-			className="border p-2 w-full rounded-md"
+			className={`border p-2 w-full rounded-md ${className}`} // ✅ fusion des classes
 		/>
 	);
 };

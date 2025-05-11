@@ -3,13 +3,15 @@ import Burger from "./Burger";
 
 function Nav() {
 	return (
-		<nav className="fixed top-0 md:top-5 left-0 w-full z-50 bg-white/90 text-blue-950 font-bold p-1 flex justify-between md:justify-around items-center shadow-md">
+		<nav className="fixed top-0 md:top-7 left-0 w-full z-50 bg-white/90 text-blue-950 font-bold p-1 flex justify-between md:justify-around items-center shadow-md">
 			<div>
-				<img
-					src="../images/Logo_ANPSV3-2.png"
-					alt="Logo de l'UDPS 57"
-					className="h-10 md:h-20 inline-block mr-2 transform transition-transform duration-300 hover:scale-125"
-				/>
+				<Link to="/">
+					<img
+						src="../images/Logo_ANPSV3-2.png"
+						alt="Logo de l'UDPS 57"
+						className="h-10 md:h-20 inline-block mr-2 transform transition-transform duration-300 hover:scale-125"
+					/>
+				</Link>
 			</div>
 
 			{/* Menu Desktop */}
