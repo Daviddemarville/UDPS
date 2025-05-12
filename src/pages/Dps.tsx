@@ -24,6 +24,11 @@ const Form = () => {
 
 	return (
 		<div className="max-w-4xl mx-auto p-4">
+			<h1 className=" text-red-500 text-2xl font-extrabold">
+				NOTRE SITE EST EN COURS DE DEPLOIEMENT CERTAINES FONCTIONNALITEES COMME
+				CE FORMULAIR NE SONT PAS ENCORE PLEINEMENT FONCTIONNELS MERCI DE VOTRE
+				COMPREHENSION
+			</h1>
 			<h1 className="text-2xl font-bold mb-4">
 				FORMULAIRE DE DEMANDE D’UN DISPOSITIF PREVISIONNEL DE SECOURS
 			</h1>
@@ -767,6 +772,71 @@ const Form = () => {
 							onChange={handleInputChange}
 							className="col-span-2 mt-4"
 						/>
+					</div>
+				</section>
+				<section className="rounded-lg border p-4 mb-6">
+					<div className="mt-4">
+						<div className="flex items-center justify-around gap-4 mb-4 flex-wrap">
+							<div className="flex items-center gap-2">
+								<label
+									htmlFor="villeDemande"
+									className="font-medium whitespace-nowrap"
+								>
+									Fait à :
+								</label>
+								<Input
+									id="villeDemande"
+									name="villeDemande"
+									value={formState.villeDemande}
+									onChange={handleInputChange}
+								/>
+							</div>
+
+							<div className="flex items-center gap-2">
+								<label
+									htmlFor="dateDemande"
+									className="font-medium whitespace-nowrap"
+								>
+									le :
+								</label>
+								<Input
+									id="dateDemande"
+									name="dateDemande"
+									type="date"
+									value={formState.dateDemande}
+									onChange={handleInputChange}
+								/>
+							</div>
+						</div>
+
+						<div className="flex justify-center items-center text-center gap-2 mb-2">
+							<label htmlFor="demandeur" className="font-medium w-full">
+								Pour l'organisme Demandeur :
+								<Input
+									id="demandeur"
+									name="demandeur"
+									value={formState.demandeur}
+									placeholder="Nom, prénom, qualité"
+									onChange={handleInputChange}
+									className="mt-1"
+								/>
+							</label>
+						</div>
+						<div className="mt-4 flex items-start gap-2">
+							<input
+								type="checkbox"
+								id="confirmation"
+								name="confirmation"
+								checked={formState.confirmation}
+								onChange={handleInputChange}
+								className="mt-1"
+							/>
+							<label htmlFor="confirmation" className="text-sm">
+								En cochant cette case, je certifie l’exactitude des informations
+								fournies et confirme que cette demande de poste de secours est
+								formulée en toute bonne foi au nom de l’organisme demandeur.
+							</label>
+						</div>
 					</div>
 				</section>
 

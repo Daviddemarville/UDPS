@@ -5,32 +5,37 @@ import { generatePDF } from "../services/pdfService"; // Hypothétique fonction 
 
 // Définition des types pour l'état du formulaire
 interface FormState {
-	files: FileList | null;
 	organism: string;
-	email: string;
 	siegesocial: string;
-	adresse: string;
 	telephonefixe: string;
 	telephoneportable: string;
-	fax: string;
+	email: string;
 	nom: string;
-	representant: string;
 	fonction: string;
-	replegal: string;
-	fonctionreplegal: string;
+	eventname: string;
 	activite: string;
-	date: string;
+	dateDebut: string;
+	dateFin: string;
 	horaires: string;
 	contact: string;
 	contactemail: string;
 	contacttel: string;
+	adresse: string;
+	circuit: string;
+	typeCircuit: string;
 	superficie: string;
 	risques: string;
 	effectifsacteurs: string;
-	effectifspublic: string;
 	ageacteurs: string;
+	effectifspublic: string;
 	agepublic: string;
+	besoinsparticuliers: string;
 	dureepresencepublic: string;
+	public: string;
+	structurePermanente: boolean;
+	structureNonPermanente: boolean;
+	structureType: string;
+	voiePublique: string;
 	dimespacepublic: string;
 	distancebrancardage: string;
 	longpente: string;
@@ -39,8 +44,35 @@ interface FormState {
 	sdisdistance: string;
 	hopital: string;
 	hopitaldistance: string;
+	arrete: boolean;
+	avisSecurite: boolean;
+	planSite: boolean;
+	annuaire: boolean;
+	autreDoc: boolean;
+	other: string;
+	medecin: boolean;
+	docName: string;
+	docTelephone: string;
+	infirmier: boolean;
+	kine: boolean;
+	otherSoignant: string;
+	ambulance: boolean;
+	otherAmbulance: string;
+	smur: boolean;
+	pompier: boolean;
+	police: boolean;
+	gendarmerie: boolean;
+	otherSecours: string;
+	villeDemande: string;
+	dateDemande: string;
+	demandeur: string;
+	confirmation: boolean;
+	files: FileList | null;
 	comment: string;
-	[key: string]: string | FileList | null | boolean;
+	representant: string;
+	replegal: string;
+	fonctionreplegal: string;
+	date: string;
 }
 
 interface FormContextType {
@@ -62,32 +94,37 @@ interface FormProviderProps {
 
 export const FormProvider = ({ children }: FormProviderProps) => {
 	const [formState, setFormState] = useState<FormState>({
-		files: null,
 		organism: "",
-		email: "",
 		siegesocial: "",
-		adresse: "",
 		telephonefixe: "",
 		telephoneportable: "",
-		fax: "",
+		email: "",
 		nom: "",
-		representant: "",
 		fonction: "",
-		replegal: "",
-		fonctionreplegal: "",
+		eventname: "",
 		activite: "",
-		date: "",
+		dateDebut: "",
+		dateFin: "",
 		horaires: "",
 		contact: "",
 		contactemail: "",
 		contacttel: "",
+		adresse: "",
+		circuit: "",
+		typeCircuit: "",
 		superficie: "",
 		risques: "",
 		effectifsacteurs: "",
-		effectifspublic: "",
 		ageacteurs: "",
+		effectifspublic: "",
 		agepublic: "",
+		besoinsparticuliers: "",
 		dureepresencepublic: "",
+		public: "",
+		structurePermanente: false,
+		structureNonPermanente: false,
+		structureType: "",
+		voiePublique: "",
 		dimespacepublic: "",
 		distancebrancardage: "",
 		longpente: "",
@@ -96,7 +133,35 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 		sdisdistance: "",
 		hopital: "",
 		hopitaldistance: "",
+		arrete: false,
+		avisSecurite: false,
+		planSite: false,
+		annuaire: false,
+		autreDoc: false,
+		other: "",
+		medecin: false,
+		docName: "",
+		docTelephone: "",
+		infirmier: false,
+		kine: false,
+		otherSoignant: "",
+		ambulance: false,
+		otherAmbulance: "",
+		smur: false,
+		pompier: false,
+		police: false,
+		gendarmerie: false,
+		otherSecours: "",
+		villeDemande: "",
+		dateDemande: "",
+		demandeur: "",
+		confirmation: false,
+		files: null,
 		comment: "",
+		representant: "",
+		replegal: "",
+		fonctionreplegal: "",
+		date: "",
 	});
 
 	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -110,11 +175,16 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
 		>,
 	) => {
-		const { name, type, value, checked } = e.target;
+		const { name, value, type } = e.target;
+
+		const newValue =
+			type === "checkbox" && "checked" in e.target
+				? (e.target as HTMLInputElement).checked
+				: value;
 
 		setFormState((prev) => ({
 			...prev,
-			[name]: type === "checkbox" ? checked : value,
+			[name]: newValue,
 		}));
 	};
 
@@ -126,6 +196,13 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 		if (!formState.organism || !formState.email) {
 			alert(
 				"Merci de remplir les champs obligatoires : Raison sociale et Email.",
+			);
+			return;
+		}
+		// Validation du formulaire via case a cochet
+		if (!formState.confirmation) {
+			alert(
+				"Veuillez confirmer que les informations saisies sont exactes en cochant la case prévue à cet effet.",
 			);
 			return;
 		}
