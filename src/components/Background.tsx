@@ -10,80 +10,37 @@ const Background = () => {
 	const [showButton, setShowButton] = useState(false);
 
 	useEffect(() => {
-		let newClass = "";
-		let newTitle = "";
-		let newText = "";
-		let newShowButton = false;
+		const backgrounds: Record<string, string> = {
+			"/": "bg-fond5",
+			"/Membres": "bg-fond3",
+			"/Don": "bg-fond10",
+			"/About": "bg-fond2",
+			"/Dps": "bg-fond7",
+			"/Contact": "bg-fond8",
+			"/Archive": "bg-fond9",
+		};
 
-		switch (location.pathname) {
-			case "/":
-				newClass = "bg-[url('/images/fond5.jpg')] bg-cover bg-left max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				newShowButton = false;
-				break;
-			case "/Membres":
-				newClass =
-					"bg-[url('/images/fond3.jpg')] bg-cover bg-center max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				newShowButton = false;
-				break;
-			case "/Don":
-				newClass =
-					"bg-[url('/images/fond10.jpg')] bg-cover bg-center max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				break;
-			case "/About":
-				newClass = "bg-[url('/images/fond2.jpg')] bg-cover bg-top max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				break;
-			case "/Dps":
-				newClass = "bg-[url('/images/fond7.jpg')] bg-cover bg-left max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				break;
-			case "/Contact":
-				newClass =
-					"bg-[url('/images/fond8.jpg')] bg-cover bg-center max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				break;
-			case "/Archive":
-				newClass =
-					"bg-[url('/images/fond9.jpg')] bg-cover bg-center max-h-[50%]";
-				newTitle = "";
-				newText = "";
-				break;
-			default:
-				newClass = "bg-gray-400"; // Fond par défaut
-				break;
-		}
+		const bg = backgrounds[location.pathname] || "bg-gray-400";
 
-		// Mise à jour des états
-		setTimeout(() => {
-			setBackgroundClass(newClass);
-			setTitle(newTitle);
-			setText(newText);
-			setShowButton(newShowButton);
-		}, 50);
+		setBackgroundClass(`${bg} bg-cover bg-center min-h-[50vh]`);
+		setTitle(""); // ajoute ton titre si besoin ici
+		setText(""); // idem
+		setShowButton(false); // adapte selon la page
 	}, [location.pathname]);
 
 	return (
 		<div
 			className={`absolute inset-0 -z-10 transition-all duration-700 ease-in-out ${backgroundClass}`}
+			role="banner"
 		>
-			{/* Affichage conditionnel du contenu */}
 			{(title || text || showButton) && (
-				<div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 mt-25 ml-10 bg-blue-950/80 border-1 border-black rounded-full px-8 md:p-6 text-center text-white shadow-xl">
-					{title && <h1 className=" md:text-4xl font-bold">{title}</h1>}
-					{text && <p className="mt-2  text-sm md:text-lg">{text}</p>}
+				<div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-blue-950/80 border border-black rounded-full px-6 md:px-8 py-4 md:p-6 text-center text-white shadow-xl">
+					{title && <h1 className="text-xl md:text-4xl font-bold">{title}</h1>}
+					{text && <p className="mt-2 text-sm md:text-lg">{text}</p>}
 					{showButton && (
 						<button
 							type="button"
-							className="text-sm md:text-md mt-4 px-4 md:px-6  md:py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+							className="text-sm md:text-md mt-4 px-4 md:px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
 						>
 							En savoir plus
 						</button>
