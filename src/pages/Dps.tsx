@@ -24,10 +24,10 @@ const Form = () => {
 
 	return (
 		<div className="max-w-4xl mx-auto p-4">
-			<h1 className=" text-red-500 text-2xl font-extrabold">
-				NOTRE SITE EST EN COURS DE DEPLOIEMENT CERTAINES FONCTIONNALITEES COMME
-				CE FORMULAIR NE SONT PAS ENCORE PLEINEMENT FONCTIONNELS MERCI DE VOTRE
-				COMPREHENSION
+			<h1 className=" text-red-500 text-2xl font-extrabold mb-15">
+				Notre site est en cours de mise en ligne. Certaines fonctionnalités,
+				comme ce formulaire, peuvent ne pas encore fonctionner correctement.
+				Merci pour votre patience et votre compréhension !
 			</h1>
 			<h1 className="text-2xl font-bold mb-4">
 				FORMULAIRE DE DEMANDE D’UN DISPOSITIF PREVISIONNEL DE SECOURS
@@ -94,9 +94,9 @@ const Form = () => {
 						</p>
 						<p>
 							- la personne désignée par l’organisateur ou l’autorité de police
-							est l’interlocuteur privilégié avec le chef de poste de l’UDPS 19
-							, sans toutefois ne pouvoir se substituer aux obligations légales
-							et réglementaires qui incombent à l’organisateur.
+							est l’interlocuteur privilégié avec le chef de poste de l’UDPS ,
+							sans toutefois ne pouvoir se substituer aux obligations légales et
+							réglementaires qui incombent à l’organisateur.
 						</p>
 						<p className="underline font-semibold">Circuit : Ouvert</p>
 						<p>

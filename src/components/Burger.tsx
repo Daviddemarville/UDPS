@@ -46,35 +46,35 @@ function Burger() {
 						Accueil
 					</Link>
 					<Link
-						to="/about"
+						to="/About"
 						className="hover:bg-blue-700 px-2 py-1 rounded"
 						onClick={() => setIsOpen(false)}
 					>
 						L'UDPS 57
 					</Link>
 					<Link
-						to="/membres"
+						to="/Membres"
 						className="hover:bg-blue-700 px-2 py-1 rounded"
 						onClick={() => setIsOpen(false)}
 					>
 						Nos bénévoles
 					</Link>
 					<Link
-						to="/dps"
+						to="/Dps"
 						className="hover:bg-blue-700 px-2 py-1 rounded"
 						onClick={() => setIsOpen(false)}
 					>
 						Poste de Secours
 					</Link>
 					<Link
-						to="/don"
+						to="/Don"
 						className="hover:bg-blue-700 px-2 py-1 rounded"
 						onClick={() => setIsOpen(false)}
 					>
 						Nous soutenir
 					</Link>
 					<Link
-						to="/contact"
+						to="/Contact"
 						className="hover:bg-blue-700 px-2 py-1 rounded"
 						onClick={() => setIsOpen(false)}
 					>

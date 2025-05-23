@@ -26,9 +26,9 @@ export default function Router() {
 				<main className="min-h-screen p-4">
 					<Routes>
 						<Route path="/" element={<Accueil />} />
-						<Route path="/membres" element={<Membres />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/contact" element={<Contact />} />
+						<Route path="/Membres" element={<Membres />} />
+						<Route path="/About" element={<About />} />
+						<Route path="/Contact" element={<Contact />} />
 						<Route path="/Archive" element={<Archive />} />
 						<Route path="/Don" element={<Don />} />
 						<Route path="/Dps" element={<Dps />} />
